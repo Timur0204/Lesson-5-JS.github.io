@@ -14,7 +14,7 @@
     let cardType = 'Неизвестный тип карты';
     if (userCard[0] === 4) {
         cardType = 'Visa';
-    } else if (userCard[0] === 5) {
+    } else if (userCard.length === 16 && ((userCard[0] === 5 && userCard[1] >= 1 && userCard[1] <= 5) || (userCard[0] === 2 && userCard[1] >= 2 && userCard[1] <= 7))) {
         cardType = 'MasterCard';
     } else if ((userCard[0] === 3 && userCard[1] === 4) || (userCard[0] === 3 && userCard[1] === 7)) {
         cardType = 'American Express';
